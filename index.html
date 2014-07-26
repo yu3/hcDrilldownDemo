@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+	<script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+<script src="http://code.highcharts.com/highcharts.js"></script>
+<script src="http://code.highcharts.com/modules/data.js"></script>
+<script src="http://code.highcharts.com/modules/drilldown.js"></script>
+</head>
+<body>
+<div id="container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+<pre id="tsv" style="display:none">Region Route	Total PAX Share	Total CGO Share
+    TPA TPEYVRvv	96.7%	44.1%
+TPA TPE-NRT-HNLvv	87.1%	21.7%
+TPA TPESFOvv	86.6%	62.5%
+TPA TPEHNLvv	85.6%	6.1%
+TPA TPENYCvv	83.7%	39.7%
+TPA TPELAXvv	82.0%	73.4%
+SEA KHHSINvv	94.5%	N.A.
+SEA TPERORvv	93.4%	N.A.
+SEA TPEKLOvv	91.8%	N.A.
+SEA TPESGNvv	91.2%	N.A.
+SEA TPESINvv	89.2%	69.3%
+SEA KHHBKKvv	86.6%	N.A.
+SEA TPEPENvv	82.8%	N.A.
+SEA TPEJKTvv	80.9%	85.2%
+SEA TPEDPSvv	80.2%	34.7%
+SEA TPEGUMvv	78.7%	5.3%
+SEA TPEKUAvv	77.5%	N.A.
+SEA TPEKULvv	76.6%	84.5%
+SEA TPERGNvv	75.2%	N.A.
+SEA TPE-SIN-SUBvv	73.5%	75.4%
+SEA TPEBKKvv	73.4%	74.9%
+SEA TPEMNLvv	72.7%	89.3%
+SEA KHHMNLvv	66.9%	N.A.
+SEA TPEHANvv	59.6%	91.9%
+SEA HKGJKTvv	59.3%	76.7%
+SEA TPEPNHvv	54.9%	N.A.
+PRC TSASHAvv	97.4%	N.A.
+PRC TPEHAKvv	95.4%	N.A.
+PRC TSAFOCvv	95.4%	N.A.
+PRC KHHCSXvv	94.6%	N.A.
+PRC KHHSZXvv	94.0%	53.6%
+PRC TPESZXvv	94.0%	82.7%
+PRC TPECANvv	93.0%	78.6%
+PRC TPEBJSvv	92.9%	63.2%
+PRC TPENKGvv	91.6%	82.7%
+PRC TPEPVGvv	90.9%	65.4%
+PRC TPECSXvv	90.6%	60.5%
+PRC TPESYXvv	89.2%	N.A.
+PRC TPEWUHvv	88.9%	77.1%
+PRC KHHPVGvv	88.1%	N.A.
+PRC TPECGQvv	86.1%	N.A.
+PRC TPETAOvv	84.5%	87.8%
+PRC KHHBJSvv	84.4%	0.0%
+PRC TPEXMNvv	84.1%	70.2%
+PRC TPEXIYvv	83.7%	45.4%
+PRC KHHXMNvv	83.1%	N.A.
+PRC TPEKHNvv	82.6%	N.A.
+PRC TPECTUvv	82.1%	68.6%
+PRC TPEYNZvv	77.4%	N.A.
+PRC TPEHFEvv	77.0%	16.8%
+PRC TPENGBvv	76.2%	44.1%
+PRC KHHKHNvv	75.6%	N.A.
+PRC KHHHGHvv	73.5%	44.0%
+PRC KHHCKGvv	68.7%	23.2%
+PRC TPELJGvv	68.7%	N.A.
+PRC TPEDLCvv	68.6%	74.7%
+PRC TPEURCvv	68.2%	0.6%
+PRC TPESHEvv	66.7%	12.5%
+PRC TPEXUZvv	62.3%	N.A.
+PRC TPEYNTvv	62.2%	N.A.
+PRC TPECGOvv	59.8%	N.A.
+PRC KHHLJGvv	59.4%	N.A.
+PRC TSAWNZvv	50.5%	N.A.
+PRC TPEWNZvv	47.9%	N.A.
+NEA TSAGMPvv	94.8%	N.A.
+NEA KHHSPKvv	94.7%	0.0%
+NEA TPEICNvv	93.0%	75.1%
+NEA TSAHNDvv	92.5%	21.2%
+NEA TPEISGvv	91.5%	N.A.
+NEA KHHICNvv	88.3%	100.0%
+NEA KHHOSAvv	86.1%	N.A.
+NEA TPEPUSvv	85.7%	N.A.
+NEA KHHKMJvv	84.6%	N.A.
+NEA RMQSPKvv	84.4%	N.A.
+NEA TPESPKvv	84.2%	31.3%
+NEA KHHNRTvv	82.5%	N.A.
+NEA TPENGOvv	82.5%	N.A.
+NEA TPEOKAvv	82.4%	4.5%
+NEA TPEHIJvv	78.5%	N.A.
+NEA TPENRTvv	77.9%	67.6%
+NEA TPEFUKvv	74.7%	N.A.
+NEA KHHOKAvv	67.6%	0.0%
+NEA TPEOSAvv	66.3%	64.2%
+NEA TPEFSZvv	65.6%	N.A.
+NEA TPETOYvv	59.2%	N.A.
+NEA TPEKOJvv	54.9%	N.A.
+NEA RMQOSAvv	49.8%	N.A.
+NEA TPEKMIvv	49.3%	N.A.
+NEA TPETAKvv	45.6%	N.A.
+NEA HKGYGJvv	38.5%	N.A.
+HKG KHHHKGvv	86.4%	22.3%
+HKG TPEHKGvv	80.1%	55.5%
+HKG TNNHKGvv	70.1%	0.0%
+EUR TPEVIEvv	93.2%	75.6%
+EUR TPEROMvv	90.0%	63.8%
+EUR TPEFRAvv	86.8%	76.7%
+EUR TPEAMSvv	78.5%	99.3%
+DOM TPEKHHvv	77.3%	N.A.
+AUS TPE-BNE-AKLvv	83.8%	72.4%
+AUS TPE-SYD-AKLvv	80.0%	75.8%</pre>
+		
+		<script type="text/javascript">
+            var dataTmp = "";
+            $(function () {
+                GetData2();  //??誹方獺
+            });
+
+            function GetData2() {
+
+                Highcharts.data({
+                    csv: document.getElementById('tsv').innerHTML,
+                    itemDelimiter: '\t',
+                    parsed: function (columns) {
+
+                        var regions = {},
+                            regionsData = [],
+                            routes = {},
+                            drilldownSeries = [];
+                        var n = 0;
+                        // Parse percentage strings
+                        columns[1] = $.map(columns[1], function (value) {
+                            if (value.indexOf('%') === value.length - 1) {
+                                value = parseFloat(value);
+                            }
+                            return value;
+                        });
+
+                        columns[2] = $.map(columns[2], function (value2) {
+                            if (value2.indexOf('%') === value2.length - 1) {
+                                value2 = parseFloat(value2);
+                            } else if (value2.trim() === "N.A.") {
+                                value2 = 0;
+                            }
+                            return value2;
+                        });
+
+                        $.each(columns[0], function (i, name) {
+                            var region,
+                                route;
+
+
+                            if (i > 0) {
+
+                                // Remove special edition notes
+                                name = name.split(' -')[0];
+
+                                // Split into region and route
+                                region = name.substring(0, 3);
+                                // Create the main data
+                                if (!regions[region]) {
+                                    regions[region] = columns[1][i];
+                                    n = 1;
+                                } else {
+                                    regions[region] += columns[1][i];
+                                    n += 1;
+                                }
+
+                                if (i + 1 <= columns[0].length - 1) {
+                                    if (region != columns[0][i + 1].substring(0, 3)) {
+                                        regions[region] = regions[region] / n;
+                                    }
+                                } else if (i === columns[0].length - 1) {
+                                    regions[region] = regions[region] / n;
+                                }
+
+
+
+                                route = name.replace(region, '').trim();
+                                // Create the route data
+                                if (route !== null) {
+                                    if (!routes[region]) {
+                                        routes[region] = [];
+                                    }
+                                    routes[region].push([route, columns[1][i], columns[2][i]]);
+                                }
+                            }
+
+                        });
+
+                        $.each(regions, function (name, y) {
+                            regionsData.push({
+                                name: name,
+                                y: y,
+                                drilldown: routes[name] ? name : null
+                            });
+                        });
+                        $.each(routes, function (key, value, value2) {
+                            drilldownSeries.push({
+                                name: key + "更瞯",
+                                id: key,
+                                data: value
+                            });
+                        });
+
+                        // Create the chart
+                        $('#container').highcharts({
+                            chart: {
+                                type: 'column'
+                            },
+                            title: {
+                                text: '跋办絬杆更瞯'
+                            },
+                            subtitle: {
+                                text: 'Click the columns to view routes.'
+                            },
+                            xAxis: {
+                                type: 'category'
+                            },
+                            yAxis: {
+                                title: {
+                                    text: 'Total percent market share'
+                                }
+                            },
+                            legend: {
+                                enabled: false
+                            },
+                            plotOptions: {
+                                series: {
+                                    borderWidth: 0,
+                                    dataLabels: {
+                                        enabled: true,
+                                        format: '{point.y:.1f}%'
+                                    }
+                                }
+                            },
+
+                            tooltip: {
+                                headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+                                pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+                            },
+
+                            series: [{
+                                name: 'regions',
+                                colorByPoint: true,
+                                data: regionsData
+                            }],
+                            drilldown: {
+                                series: drilldownSeries
+                            }
+                        })
+
+                    }
+                });
+            }
+        </script>
+</body>
+</html>
